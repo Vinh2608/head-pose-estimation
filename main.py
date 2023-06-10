@@ -99,14 +99,14 @@ def run():
             # face_detector.visualize(frame, faces)
 
         # Draw the FPS on screen.
-        cv2.rectangle(img, (0, 0), (90, 30), (0, 0, 0), cv2.FILLED)
-        cv2.putText(img, f"FPS: {tm.getFPS():.0f}", (10, 20),
+        img = cv2.rectangle(img, (0, 0), (90, 30), (0, 0, 0), cv2.FILLED)
+        img = cv2.putText(img, f"FPS: {tm.getFPS():.0f}", (10, 20),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255))
 
         # Show preview.
-        cv2.imshow("Preview", img)
-        if cv2.waitKey(1) == 27:
-            cv2.destroyAllWindows()
+        # cv2.imshow("Preview", img)
+        # if cv2.waitKey(1) == 27:
+        #     cv2.destroyAllWindows()
         plt.imshow(img)
         plt.show()
 if __name__ == '__main__':
